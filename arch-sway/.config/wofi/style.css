@@ -1,0 +1,53 @@
+* {
+    font-family: 'monospace';
+    font-size: 14px;
+}
+
+window {
+    background-color: #6272a4;
+}
+
+#input {
+    margin-bottom: 10px;
+    padding: 2px 10px;
+    border-radius: 0px;
+    border: solid 2px transparent;
+    background-color: #333544;
+    color: white;
+}
+
+#input:focus {
+    box-shadow: none;
+    border: solid 2px #6272a4;
+}
+
+#input::placeholder {
+    color: transparent;
+}
+
+#inner-box {
+    background-color: #282a36;
+}
+
+#outer-box {
+    margin: 2px;
+    padding: 10px;
+    background-color: #282a36;
+}
+
+#text {
+    padding: 5px;
+    color: white;
+}
+
+#entry {
+    padding: 5px 10px;
+}
+
+#entry:selected {
+    background-color: #6272a4;
+}
+
+image {
+    margin: 0 15px 0 0;
+}

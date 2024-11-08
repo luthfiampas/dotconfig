@@ -1,0 +1,15 @@
+#!/bin/bash
+
+sudo rm -f /usr/share/applications/Alacritty.desktop
+sudo rm -f /usr/share/applications/avahi-discover.desktop
+sudo rm -f /usr/share/applications/bssh.desktop
+sudo rm -f /usr/share/applications/bvnc.desktop
+sudo rm -f /usr/share/applications/htop.desktop
+sudo rm -f /usr/share/applications/imv.desktop
+sudo rm -f /usr/share/applications/imv-dir.desktop
+sudo rm -f /usr/share/applications/lstopo.desktop
+sudo rm -f /usr/share/applications/mpv.desktop
+sudo rm -f /usr/share/applications/org.pulseaudio.pavucontrol.desktop
+sudo rm -f /usr/share/applications/qv4l2.desktop
+sudo rm -f /usr/share/applications/qvidcap.desktop
+sudo rm -f /usr/share/applications/vim.desktop
