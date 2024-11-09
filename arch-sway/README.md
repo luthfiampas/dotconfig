@@ -33,4 +33,8 @@ sudo systemctl mask systemd-resolved
 
 ## Set up `lutlight`
 
-The `light` program used for adjusting brightness may require write permissions to the `/sys/class/backlight/*/brightness` file. Make sure the necessary permissions are configured for it to function correctly.
+The `light` program used for adjusting brightness requires write permissions to the `/sys/class/backlight/*/brightness` file. By default, only `root` can change the brightness by this method. To grant access, add the user to the `video` group.
+
+```shell
+usermod -aG video <user>
+```
