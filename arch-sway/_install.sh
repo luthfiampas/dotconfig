@@ -162,6 +162,25 @@ cp .config/user-dirs.dirs ~/.config/.
 echo "Setting up ssh-agent service..."
 systemctl --user enable --now ssh-agent
 
+# Install commonly used VSCode extensions
+echo "Installing VSCode extensions..."
+code --install-extension codeium.codeium && \
+code --install-extension devsense.phptools-vscode && \
+code --install-extension eamodio.gitlens && \
+code --install-extension editorconfig.editorconfig && \
+code --install-extension esbenp.prettier-vscode && \
+code --install-extension fcrespo82.markdown-table-formatter && \
+code --install-extension gruntfuggly.todo-tree && \
+code --install-extension hediet.vscode-drawio && \
+code --install-extension miguelsolorio.symbols && \
+code --install-extension ms-dotnettools.csharp && \
+code --install-extension redhat.vscode-yaml && \
+code --install-extension rogalmic.vscode-xml-complete && \
+code --install-extension shd101wyy.markdown-preview-enhanced && \
+code --install-extension sissel.shopify-liquid && \
+code --install-extension sleistner.vscode-fileutils && \
+code --install-extension tamasfe.even-better-toml
+
 # Clean up AUR packages and cache
 echo "Cleaning up AUR packages and cache..."
 yay -Yc --noconfirm
