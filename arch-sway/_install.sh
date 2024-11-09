@@ -72,7 +72,17 @@ dnscrypt-proxy \
 pavucontrol \
 samba \
 visual-studio-code-bin \
-firefox
+firefox \
+dbeaver \
+sqlitestudio-bin \
+dotnet-sdk \
+aspnet-runtime \
+obs-studio \
+qt6-wayland \
+blender \
+easyeffects \
+qemu-full \
+virt-manager
 
 # Install Oh My Zsh
 echo "Installing Oh My Zsh..."
