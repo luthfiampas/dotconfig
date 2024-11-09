@@ -44,7 +44,8 @@ export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 # Add .bin PATH
 export PATH=$PATH:~/.bin
 
-# Configure systemd editor
+# Configure default editors
+export EDITOR=vim
 export SYSTEMD_EDITOR=vim
 
 # Configure auto suggestions plugin
