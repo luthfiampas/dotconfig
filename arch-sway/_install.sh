@@ -142,6 +142,10 @@ cp .vimrc ~/.
 cp .zprofile ~/.
 cp .zshrc ~/.
 
+# Copy SSH config file
+echo "Copying SSH config file..."
+mkdir -p ~/.ssh && cp .ssh/config ~/.ssh/.
+
 # Copy .config files and directories
 echo "Copying .config files..."
 cp -r .config/alacritty ~/.config/.
