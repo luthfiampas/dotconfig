@@ -21,24 +21,6 @@ To set up the system, use the provided installation script. Note that the script
 
 3. Once the script finishes, reboot the system.
 
-## Set up `lutlight`
-
-The `light` program used to adjust brightness requires write permissions to the `/sys/class/backlight/*/brightness` file. By default, only `root` can change the brightness. To grant access, add user to the `video` group:
-
-```shell
-sudo usermod -aG video <user>
-```
-
-## Configure `Samba`
-
-To enable file sharing with `Samba`, add user to the `smbusers` group and set a `Samba` password for authentication:
-
-```shell
-sudo groupadd smbusers
-sudo usermod -aG smbusers <user>
-sudo smbpasswd -a <user>
-```
-
 ## Install `Firefox-UI-Fix`
 
 Install the `Firefox-UI-Fix` script to apply the `photon` UI style:

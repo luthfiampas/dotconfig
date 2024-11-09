@@ -188,6 +188,29 @@ code --install-extension sissel.shopify-liquid && \
 code --install-extension sleistner.vscode-fileutils && \
 code --install-extension tamasfe.even-better-toml
 
+# Configure samba
+echo "Configuring samba..."
+sudo groupadd smbusers
+sudo usermod -aG smbusers $USER
+sudo smbpasswd -a $USER
+
+# Configure light
+echo "Configuring light..."
+sudo usermod -aG video $USER
+
+# Configure docker
+echo "Configuring docker..."
+sudo usermod -aG docker $USER
+
+# Install global dotnet tools
+echo "Installing global dotnet tools..."
+dotnet tool install --global dotnet-ef
+dotnet tool install --global csharprepl
+
+# Install dotnet templates
+echo "Installing dotnet templates..."
+dotnet new install Avalonia.Templates
+
 # Clean up AUR packages and cache
 echo "Cleaning up AUR packages and cache..."
 yay -Yc --noconfirm
