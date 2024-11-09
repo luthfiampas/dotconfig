@@ -212,6 +212,10 @@ dotnet tool install --global csharprepl
 echo "Installing dotnet templates..."
 dotnet new install Avalonia.Templates
 
+# Clean cache
+echo "Cleaning cache..."
+sudo rm -rf ~/.cache/*
+
 # Clean up AUR packages and cache
 echo "Cleaning up AUR packages and cache..."
 yay -Yc --noconfirm
