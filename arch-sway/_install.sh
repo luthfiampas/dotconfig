@@ -77,6 +77,7 @@ dbeaver \
 sqlitestudio-bin \
 dotnet-sdk \
 aspnet-runtime \
+docker \
 obs-studio \
 qt6-wayland \
 blender \
