@@ -237,6 +237,10 @@ echo "core.editor: $(git config --global core.editor)"
 echo "Cleaning cache..."
 sudo rm -rf ~/.cache/*
 
+# Perform clean-desktop
+echo "Cleaning desktop..."
+.bin/clean-desktop
+
 # Clean up AUR packages and cache
 echo "Cleaning up AUR packages and cache..."
 yay -Yc --noconfirm
