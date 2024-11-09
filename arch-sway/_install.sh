@@ -122,8 +122,8 @@ sudo chmod 777 -R /data
 echo "Copying wallpapers..."
 cp root/data/pictures/wallpapers/* /data/pictures/wallpapers/.
 
-# Copy necessary config files to root
-echo "Copying config files..."
+# Copy necessary files to root
+echo "Copying necessary files to root..."
 sudo cp root/etc/resolv.conf /etc/resolv.conf
 sudo mkdir -p /etc/systemd
 sudo cp root/etc/systemd/resolved.conf /etc/systemd/resolved.conf
