@@ -212,6 +212,27 @@ dotnet tool install --global csharprepl
 echo "Installing dotnet templates..."
 dotnet new install Avalonia.Templates
 
+# Configure git: prompt for user.name
+echo "Please enter your Git user name:"
+read git_username
+git config --global user.name "$git_username"
+
+# Configure git: prompt for user.email
+echo "Please enter your Git email address:"
+read git_email
+git config --global user.email "$git_email"
+
+# Configure git: prompt for core.editor
+echo "Please enter your preferred text editor for Git (e.g., vim, nano, code):"
+read git_editor
+git config --global core.editor "$git_editor"
+
+# Configure git: confirmation
+echo "Git configuration updated:"
+echo "user.name: $(git config --global user.name)"
+echo "user.email: $(git config --global user.email)"
+echo "core.editor: $(git config --global core.editor)"
+
 # Clean cache
 echo "Cleaning cache..."
 sudo rm -rf ~/.cache/*
