@@ -122,7 +122,7 @@ sudo chmod 777 -R /data
 echo "Copying wallpapers..."
 cp root/data/pictures/wallpapers/* /data/pictures/wallpapers/.
 
-# Copy config files in root
+# Copy necessary config files to root
 echo "Copying config files..."
 sudo cp root/etc/resolv.conf /etc/resolv.conf
 sudo mkdir -p /etc/systemd
@@ -133,6 +133,7 @@ sudo mkdir -p /etc/samba
 sudo cp root/etc/samba/smb.conf /etc/samba/smb.conf
 sudo mkdir -p /boot/loader
 sudo cp root/boot/loader/loader.conf /boot/loader/loader.conf
+sudo cp root/usr/share/applications/firefox-private.desktop /usr/share/applications/firefox-private.desktop
 
 # Copy dot files to home directory
 echo "Copying dot files..."
