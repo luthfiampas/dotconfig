@@ -69,7 +69,6 @@ imv \
 mpv \
 ffmpeg \
 dnscrypt-proxy \
-dnsmasq \
 pavucontrol \
 samba \
 visual-studio-code-bin \
@@ -86,10 +85,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/fdellwing/zsh-bat.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-bat
 
-# Try to start dnscrypt-proxy and dnsmasq
-# Continue even if an error occurs
-echo "Setting up systemd services for dnsmasq and dnscrypt-proxy..."
-sudo systemctl enable --now dnsmasq || true
+# Try to start dnscrypt-proxy and continue even if an error occurs
+echo "Setting up dnscrypt-proxy service..."
 sudo systemctl enable --now dnscrypt-proxy || true
 
 # Build lutlight
@@ -114,14 +111,15 @@ cp root/data/pictures/wallpapers/* /data/pictures/wallpapers/.
 
 # Copy config files in root
 echo "Copying config files..."
+sudo cp root/etc/resolv.conf /etc/resolv.conf
+sudo mkdir -p /etc/systemd
+sudo cp root/etc/systemd/resolved.conf /etc/systemd/resolved.conf
 sudo mkdir -p /etc/dnscrypt-proxy
 sudo cp root/etc/dnscrypt-proxy/dnscrypt-proxy.toml /etc/dnscrypt-proxy/dnscrypt-proxy.toml
 sudo mkdir -p /etc/samba
 sudo cp root/etc/samba/smb.conf /etc/samba/smb.conf
 sudo mkdir -p /boot/loader
 sudo cp root/boot/loader/loader.conf /boot/loader/loader.conf
-sudo cp root/etc/dnsmasq.conf /etc/dnsmasq.conf
-sudo cp root/etc/resolv.conf /etc/resolv.conf
 
 # Copy dot files to home directory
 echo "Copying dot files..."

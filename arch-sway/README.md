@@ -21,16 +21,6 @@ To set up the system, use the provided installation script. Note that the script
 
 3. Once the script finishes, reboot the system.
 
-## Configure `dnscrypt-proxy`
-
-To ensure that `dnscrypt-proxy` works correctly, it might be necessary to stop, disable, and mask the `systemd-resolved` service. This is because `dnsmasq` needs exclusive access to port 53, and `systemd-resolved` could interfere with this. After making these changes, a system reboot might be required.
-
-```shell
-sudo systemctl stop systemd-resolved && \
-sudo systemctl disable systemd-resolved && \
-sudo systemctl mask systemd-resolved
-```
-
 ## Set up `lutlight`
 
 The `light` program used for adjusting brightness requires write permissions to the `/sys/class/backlight/*/brightness` file. By default, only `root` can change the brightness by this method. To grant access, add the user to the `video` group.
