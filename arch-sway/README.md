@@ -36,5 +36,13 @@ sudo systemctl mask systemd-resolved
 The `light` program used for adjusting brightness requires write permissions to the `/sys/class/backlight/*/brightness` file. By default, only `root` can change the brightness by this method. To grant access, add the user to the `video` group.
 
 ```shell
-usermod -aG video <user>
+sudo usermod -aG video <user>
+```
+
+## Configure Samba
+
+```shell
+sudo groupadd smbusers
+sudo usermod -aG smbusers <user>
+sudo smbpasswd -a <user>
 ```

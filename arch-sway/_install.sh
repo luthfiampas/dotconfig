@@ -71,6 +71,7 @@ ffmpeg \
 dnscrypt-proxy \
 dnsmasq \
 pavucontrol \
+samba \
 visual-studio-code-bin \
 firefox
 
@@ -114,7 +115,9 @@ cp root/data/pictures/wallpapers/* /data/pictures/wallpapers/.
 # Copy config files in root
 echo "Copying config files..."
 sudo mkdir -p /etc/dnscrypt-proxy
-sudo cp -r root/etc/dnscrypt-proxy/dnscrypt-proxy.toml /etc/dnscrypt-proxy/dnscrypt-proxy.toml
+sudo cp root/etc/dnscrypt-proxy/dnscrypt-proxy.toml /etc/dnscrypt-proxy/dnscrypt-proxy.toml
+sudo mkdir -p /etc/samba
+sudo cp root/etc/samba/smb.conf /etc/samba/smb.conf
 sudo mkdir -p /boot/loader
 sudo cp root/boot/loader/loader.conf /boot/loader/loader.conf
 sudo cp root/etc/dnsmasq.conf /etc/dnsmasq.conf
