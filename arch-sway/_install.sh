@@ -60,6 +60,8 @@ xorg-xwayland \
 polkit-gnome \
 xdg-desktop-portal \
 xdg-desktop-portal-wlr \
+fastfetch \
+calc \
 light \
 ddcutil \
 grim \
