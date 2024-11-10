@@ -46,6 +46,7 @@ fzf \
 bat \
 btop \
 ntfs-3g \
+glow \
 openssh \
 pipewire \
 pipewire-audio \
@@ -166,6 +167,7 @@ cp -r .config/waybar ~/.config/.
 cp -r .config/wofi ~/.config/.
 cp -r .config/xdg-desktop-portal ~/.config/.
 cp -r .config/btop ~/.config/.
+cp -r .config/glow ~/.config/.
 cp .config/user-dirs.dirs ~/.config/.
 
 # Create and start ssh-agent service
