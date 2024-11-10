@@ -45,6 +45,7 @@ zsh \
 fzf \
 bat \
 btop \
+ntfs-3g \
 openssh \
 pipewire \
 pipewire-audio \
