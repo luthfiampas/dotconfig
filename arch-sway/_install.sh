@@ -120,7 +120,14 @@ cp .bin/clean-desktop ~/.bin/. && chmod +x ~/.bin/clean-desktop
 echo "Creating directories..."
 sudo mkdir -p /data/pictures/wallpapers
 sudo mkdir -p /data/repos/personal
+sudo mkdir -p /data/repos/client
+sudo mkdir -p /mnt/1
+sudo mkdir -p /mnt/2
+sudo mkdir -p /mnt/3
 sudo chmod 777 -R /data
+sudo chmod 777 -R /mnt/1
+sudo chmod 777 -R /mnt/2
+sudo chmod 777 -R /mnt/3
 
 # Copy wallpapers
 echo "Copying wallpapers..."
