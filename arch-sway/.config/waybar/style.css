@@ -1,6 +1,6 @@
 * {
     font-family: 'JetBrainsMono Nerd Font', 'Font Awesome 6 Brands', 'Font Awesome 6 Free', 'Font Awesome 6 Free Solid';
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .modules-left {
@@ -54,7 +54,7 @@ window#waybar.empty #window {
 #disk,
 #clock,
 #tray {
-    margin: 0px 12px;
+    padding: 0px 12px;
 }
 
 #battery.critical {
