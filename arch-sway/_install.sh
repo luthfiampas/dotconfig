@@ -193,7 +193,8 @@ code --install-extension rogalmic.vscode-xml-complete && \
 code --install-extension shd101wyy.markdown-preview-enhanced && \
 code --install-extension sissel.shopify-liquid && \
 code --install-extension sleistner.vscode-fileutils && \
-code --install-extension tamasfe.even-better-toml
+code --install-extension tamasfe.even-better-toml && \
+code --install-extension yinz.safira
 
 # Configure samba
 echo "Configuring samba..."
