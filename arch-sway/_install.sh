@@ -202,7 +202,7 @@ configure_vim() {
     cp .vimrc ~/.
 
     echo "Installing vim plugins..."
-    vim -E -s -c 'set nocompatible' -c 'source ~/.vimrc' -c 'PlugInstall' -c 'qa'
+    vim -E -s -c 'set nocompatible' -c 'source ~/.vimrc' -c 'PlugInstall' -c 'qa' || true
     echo "Vim plugins installed successfully!"
 }
 
