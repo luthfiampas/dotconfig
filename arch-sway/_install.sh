@@ -187,7 +187,7 @@ code --install-extension fcrespo82.markdown-table-formatter && \
 code --install-extension gruntfuggly.todo-tree && \
 code --install-extension hediet.vscode-drawio && \
 code --install-extension miguelsolorio.symbols && \
-code --install-extension ms-dotnettools.csharp && \
+code --install-extension ms-dotnettools.csharp@2.45.25 && \
 code --install-extension redhat.vscode-yaml && \
 code --install-extension rogalmic.vscode-xml-complete && \
 code --install-extension shd101wyy.markdown-preview-enhanced && \
