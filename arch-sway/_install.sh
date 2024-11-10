@@ -36,6 +36,8 @@ ttf-roboto-serif \
 ttf-jetbrains-mono \
 ttf-jetbrains-mono-nerd \
 ttf-font-awesome \
+noto-fonts-emoji \
+noto-fonts-cjk \
 iwd \
 zip \
 unzip \
