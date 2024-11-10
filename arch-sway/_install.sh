@@ -25,14 +25,12 @@ install_yay() {
 
 install_pyenv() {
     echo "Installing pyenv..."
-    sudo pacman -S --needed --noconfirm gcc make libssl zlib git
     curl https://pyenv.run | bash
     echo "pyenv installed successfully!"
 }
 
 install_nvm() {
     echo "Installing nvm..."
-    sudo pacman -S --needed --noconfirm curl
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
     echo "nvm installed successfully!"
 }
