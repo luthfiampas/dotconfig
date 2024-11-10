@@ -55,6 +55,7 @@ install_essential_packages() {
         ddcutil \
         dbeaver \
         dnscrypt-proxy \
+        docker \
         dotnet-sdk \
         easyeffects \
         ffmpeg \
