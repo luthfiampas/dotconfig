@@ -1,9 +1,19 @@
 syntax enable
 
+call plug#begin()
+
+Plug 'tomasiser/vim-code-dark'
+Plug 'tribela/vim-transparent'
+Plug 'itmammoth/doorboy.vim'
+Plug 'tpope/vim-surround'
+
+call plug#end()
+
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set number
+set number relativenumber
+set ignorecase
 
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+colorscheme codedark

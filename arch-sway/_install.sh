@@ -176,6 +176,14 @@ cp .config/user-dirs.dirs ~/.config/.
 echo "Setting up ssh-agent service..."
 systemctl --user enable --now ssh-agent
 
+# Install vim-plug
+echo "Installing vim-plug..."
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Install vim plugins
+echo "Installing vim plugins..."
+vim -N -es -c 'PlugInstall!' -c 'qa'
+
 # Install commonly used VSCode extensions
 echo "Installing VSCode extensions..."
 code --install-extension codeium.codeium && \
