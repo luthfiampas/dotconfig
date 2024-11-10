@@ -202,11 +202,11 @@ configure_vim() {
     cp .vimrc ~/.
 
     echo "Installing vim plugins..."
-    vim -N -es -c 'PlugInstall!' -c 'qa'
+    vim -E -s -c 'set nocompatible' -c 'source ~/.vimrc' -c 'PlugInstall' -c 'qa'
     echo "Vim plugins installed successfully!"
 
     echo "Enabling vim transparent background..."
-    vim -N -es -c 'TransparentEnable' -c 'qa'
+    vim -E -s -c 'set nocompatible' -c 'source ~/.vimrc' -c 'TransparentEnable' -c 'qa'
     echo "Vim transparent background enabled successfully!"
 }
 
