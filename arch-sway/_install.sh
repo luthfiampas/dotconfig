@@ -85,6 +85,7 @@ install_essential_packages() {
         dbeaver \
         ddcutil \
         dnscrypt-proxy \
+        dnsmasq \
         docker \
         dotnet-sdk \
         easyeffects \
