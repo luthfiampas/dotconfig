@@ -2,6 +2,35 @@
 
 set -e
 
+retry_command() {
+    local command="$1"
+    local max_retries=10
+    local retry_delay=5
+    local attempt=0
+    local exit_status
+
+    while true; do
+        eval "$command"
+        exit_status=$?
+
+        if [ $exit_status -eq 0 ]; then
+            break
+        fi
+
+        attempt=$((attempt + 1))
+
+        if [ $attempt -ge $max_retries ]; then
+            echo "Command failed after $max_retries attempts."
+            return 1
+        fi
+
+        echo "Command failed. Retrying in $retry_delay seconds... (Attempt $attempt/$max_retries)"
+        sleep $retry_delay
+    done
+
+    return 0
+}
+
 install_zsh() {
     echo "Installing Zsh and dependencies..."
     sudo pacman -S --needed --noconfirm zsh git curl
@@ -52,52 +81,63 @@ install_essential_packages() {
         blender \
         btop \
         calc \
-        ddcutil \
+        dart-sass \
         dbeaver \
+        ddcutil \
         dnscrypt-proxy \
         docker \
         dotnet-sdk \
         easyeffects \
+        fastfetch \
         ffmpeg \
+        firefox \
         fzf \
+        git \
         glow \
+        go \
         grim \
+        hugo \
         imv \
         iwd \
         light \
+        man \
         mpv \
         ncdu \
         noto-fonts-cjk \
         noto-fonts-emoji \
         ntfs-3g \
+        obs-studio \
         openssh \
-        polkit-gnome \
+        pavucontrol \
         pipewire \
         pipewire-alsa \
         pipewire-audio \
         pipewire-jack \
         pipewire-pulse \
-        pavucontrol \
-        powerlevel10k-git \
+        polkit-gnome \
+        qemu-full \
         qt6-wayland \
-        grim \
-        sqlitestudio-bin \
         samba \
+        slurp \
+        sqlitestudio-bin \
+        swappy \
         sway \
         swaybg \
-        swappy \
         ttf-font-awesome \
         ttf-jetbrains-mono \
         ttf-jetbrains-mono-nerd \
         ttf-roboto \
         ttf-roboto-serif \
+        unzip \
         vim \
+        virt-manager \
         visual-studio-code-bin \
         waybar \
         wofi \
         xdg-desktop-portal \
         xdg-desktop-portal-wlr \
-        xorg-xwayland
+        xorg-xwayland \
+        zip
 
     echo "Essential packages installed successfully!"
 }
@@ -162,24 +202,6 @@ copy_ssh_config() {
     chmod 600 ~/.ssh/config
 
     echo "SSH config file copied successfully!"
-}
-
-setup_services() {
-    echo "Setting up dnscrypt-proxy service..."
-    if sudo systemctl enable --now dnscrypt-proxy; then
-        echo "dnscrypt-proxy service started successfully."
-    else
-        echo "Failed to start dnscrypt-proxy service, but continuing..."
-    fi
-
-    echo "Setting up ssh-agent service..."
-    if systemctl --user enable --now ssh-agent; then
-        echo "ssh-agent service started successfully."
-    else
-        echo "Failed to start ssh-agent service."
-    fi
-
-    echo "Service setup complete. If any issues occurred, please review the error messages above."
 }
 
 configure_zsh() {
@@ -273,11 +295,13 @@ configure_git() {
 }
 
 configure_dotnet() {
-    echo "Installing global dotnet tools..."
+    echo "Installing dotnet-ef tool..."
     dotnet tool install --global dotnet-ef
+
+    echo "Installing csharprepl tool..."
     dotnet tool install --global csharprepl
 
-    echo "Installing dotnet templates..."
+    echo "Installing Avalonia template..."
     dotnet new install Avalonia.Templates
 
     echo "Global dotnet tools and templates installed successfully!"
@@ -286,24 +310,24 @@ configure_dotnet() {
 configure_vs_code() {
     echo "Installing Visual Studio Code extensions..."
 
-    code --install-extension codeium.codeium
-    code --install-extension devsense.phptools-vscode
-    code --install-extension eamodio.gitlens
-    code --install-extension editorconfig.editorconfig
-    code --install-extension esbenp.prettier-vscode
-    code --install-extension fcrespo82.markdown-table-formatter
-    code --install-extension foxundermoon.shell-format
-    code --install-extension gruntfuggly.todo-tree
-    code --install-extension hediet.vscode-drawio
-    code --install-extension miguelsolorio.symbols
-    code --install-extension ms-dotnettools.csharp@2.45.25
-    code --install-extension redhat.vscode-yaml
-    code --install-extension rogalmic.vscode-xml-complete
-    code --install-extension shd101wyy.markdown-preview-enhanced
-    code --install-extension sissel.shopify-liquid
-    code --install-extension sleistner.vscode-fileutils
-    code --install-extension tamasfe.even-better-toml
-    code --install-extension yinz.safira
+    retry_command "code --install-extension codeium.codeium"
+    retry_command "code --install-extension devsense.phptools-vscode"
+    retry_command "code --install-extension eamodio.gitlens"
+    retry_command "code --install-extension editorconfig.editorconfig"
+    retry_command "code --install-extension esbenp.prettier-vscode"
+    retry_command "code --install-extension fcrespo82.markdown-table-formatter"
+    retry_command "code --install-extension foxundermoon.shell-format"
+    retry_command "code --install-extension gruntfuggly.todo-tree"
+    retry_command "code --install-extension hediet.vscode-drawio"
+    retry_command "code --install-extension miguelsolorio.symbols"
+    retry_command "code --install-extension ms-dotnettools.csharp@2.45.25"
+    retry_command "code --install-extension redhat.vscode-yaml"
+    retry_command "code --install-extension rogalmic.vscode-xml-complete"
+    retry_command "code --install-extension shd101wyy.markdown-preview-enhanced"
+    retry_command "code --install-extension sissel.shopify-liquid"
+    retry_command "code --install-extension sleistner.vscode-fileutils"
+    retry_command "code --install-extension tamasfe.even-better-toml"
+    retry_command "code --install-extension yinz.safira"
 
     echo "Visual Studio Code configured successfully!"
 }
@@ -318,6 +342,24 @@ configure_node_js() {
     echo "Installing Node.js LTS from nvm..."
     zsh -c "source ~/.zshrc && nvm install --lts && nvm use --lts" || echo "Node.js LTS installation failed"
     echo "Node.js LTS installed successfully!"
+}
+
+configure_services() {
+    echo "Setting up dnscrypt-proxy service..."
+    if sudo systemctl enable --now dnscrypt-proxy; then
+        echo "dnscrypt-proxy service started successfully."
+    else
+        echo "Failed to start dnscrypt-proxy service, but continuing..."
+    fi
+
+    echo "Setting up ssh-agent service..."
+    if systemctl --user enable --now ssh-agent; then
+        echo "ssh-agent service started successfully."
+    else
+        echo "Failed to start ssh-agent service."
+    fi
+
+    echo "Service setup complete. If any issues occurred, please review the error messages above."
 }
 
 clean_up() {
@@ -369,7 +411,6 @@ copy_dotfiles
 copy_bin_files
 copy_ssh_config
 
-setup_services
 configure_zsh
 configure_vim
 configure_samba
@@ -380,6 +421,7 @@ configure_dotnet
 configure_vs_code
 configure_python
 configure_node_js
+configure_services
 
 clean_up
 echo "Installation complete!"
