@@ -87,6 +87,7 @@ install_essential_packages() {
         dnscrypt-proxy \
         dnsmasq \
         docker \
+        docker-compose \
         dotnet-sdk \
         easyeffects \
         fastfetch \
