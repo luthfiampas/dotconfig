@@ -77,6 +77,7 @@ install_essential_packages() {
     yay -S --noconfirm --needed \
         alacritty \
         aspnet-runtime \
+        axel \
         bat \
         blender \
         btop \
@@ -139,6 +140,7 @@ install_essential_packages() {
         xdg-desktop-portal \
         xdg-desktop-portal-wlr \
         xorg-xwayland \
+        xz \
         zip
 
     echo "Essential packages installed successfully!"
