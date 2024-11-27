@@ -122,7 +122,7 @@ install_essential_packages() {
         qt6-wayland \
         samba \
         slurp \
-        sqlitestudio-bin \
+        sqlitebrowser \
         swappy \
         sway \
         swaybg \
