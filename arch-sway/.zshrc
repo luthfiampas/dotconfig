@@ -45,6 +45,9 @@ export PATH=$HOME/.dotnet/tools:$PATH
 export GOPATH=$HOME/.go
 export PATH=$GOPATH/bin:$PATH
 
+# Configure rust
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+
 # Configure ssh-agent service
 export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
 

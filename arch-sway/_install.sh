@@ -64,6 +64,14 @@ install_nvm() {
     echo "nvm installed successfully!"
 }
 
+install_rust() {
+    echo "Installing Rust..."
+    sudo pacman -S --needed --noconfirm rustup
+    rustup install stable
+    rustup default stable
+    echo "Rust installed successfully!"
+}
+
 install_lutlight() {
     echo "Building lutlight..."
     mkdir -p ~/.bin
@@ -420,6 +428,7 @@ install_zsh
 install_yay
 install_pyenv
 install_nvm
+install_rust
 install_lutlight
 install_essential_packages
 
