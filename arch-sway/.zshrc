@@ -26,6 +26,9 @@ setopt HIST_BEEP
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Configure aliases
+alias spotify="spotify_player"
+
 # Configure pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -37,6 +40,10 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 # Configure dotnet tools
 export PATH=$HOME/.dotnet/tools:$PATH
+
+# Configure go
+export GOPATH=$HOME/.go
+export PATH=$GOPATH/bin:$PATH
 
 # Configure ssh-agent service
 export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
