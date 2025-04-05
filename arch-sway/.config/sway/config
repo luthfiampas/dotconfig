@@ -271,8 +271,6 @@ titlebar_border_thickness 0
 for_window [app_id="code"] opacity 0.95
 for_window [class="Code"] opacity 0.95
 
-for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move absolute position 0 0
-
 
 
 # ----------------------------------------
