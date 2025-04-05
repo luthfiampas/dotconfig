@@ -91,6 +91,7 @@ install_essential_packages() {
         blender \
         btop \
         calc \
+        chromium \
         dart-sass \
         dbeaver \
         ddcutil \
