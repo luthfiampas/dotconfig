@@ -8,6 +8,9 @@
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
@@ -29,10 +32,17 @@
     "[xml]": {
         "editor.defaultFormatter": "rogalmic.vscode-xml-complete"
     },
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "codeium.enableConfig": {
         "*": true,
+        "aspnetcorerazor": true,
+        "editorconfig": true,
+        "http": true,
         "markdown": true,
-        "xml": true
+        "xml": true,
+        "env": true
     },
     "csharp.semanticHighlighting.enabled": true,
     "diffEditor.ignoreTrimWhitespace": false,
@@ -46,6 +56,10 @@
     "editor.semanticHighlighting.enabled": true,
     "editor.stickyScroll.enabled": false,
     "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?_",
+    "emmet.includeLanguages": {
+        "aspnetcorerazor": "html",
+        "razor": "html"
+    },
     "explorer.autoReveal": false,
     "explorer.compactFolders": false,
     "extensions.autoUpdate": false,
@@ -57,14 +71,17 @@
     },
     "files.enableTrash": false,
     "git.openRepositoryInParentFolders": "never",
-    "gitlens.telemetry.enabled": false,
     "hediet.vscode-drawio.resizeImages": null,
     "markdown-preview-enhanced.codeBlockTheme": "auto.css",
-    "markdown-preview-enhanced.previewTheme": "github-dark.css",
+    "markdown-preview-enhanced.previewTheme": "atom-dark.css",
     "omnisharp.autoStart": false,
     "omnisharp.enableDecompilationSupport": true,
+    "php.inlayHints.insertOnDoubleClick": false,
     "php.inlayHints.parameters.byReference": false,
     "php.inlayHints.parameters.enabled": false,
+    "php.inlayHints.types.lambdaParameter": false,
+    "php.inlayHints.types.return": false,
+    "php.inlayHints.types.suppressVariableFromLiteral": false,
     "remote.autoForwardPortsSource": "hybrid",
     "security.workspace.trust.untrustedFiles": "open",
     "symbols.hidesExplorerArrows": false,
@@ -116,5 +133,20 @@
             "xmlns": "http://schemas.microsoft.com/developer/msbuild/2003",
             "xsdUri": "https://raw.githubusercontent.com/Microsoft/msbuild/master/src/MSBuild/MSBuild/Microsoft.Build.CommonTypes.xsd https://raw.githubusercontent.com/Microsoft/msbuild/master/src/MSBuild/MSBuild/Microsoft.Build.Core.xsd"
         }
-    ]
+    ],
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "tsconfig.json": "tsconfig.*.json",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+        "*.sqlite": "${capture}.${extname}-*",
+        "*.db": "${capture}.${extname}-*",
+        "*.sqlite3": "${capture}.${extname}-*",
+        "*.db3": "${capture}.${extname}-*",
+        "*.sdb": "${capture}.${extname}-*",
+        "*.s3db": "${capture}.${extname}-*"
+    },
+    "diffEditor.renderSideBySide": true
 }
