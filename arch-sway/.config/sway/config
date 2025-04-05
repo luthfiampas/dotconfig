@@ -130,7 +130,7 @@ bindsym XF86AudioLowerVolume exec pactl -- set-sink-volume 0 -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # Taking a screenshot and snapping
-bindsym Print exec grim -g "$(slurp)" - | swappy -f -
+bindsym Print exec bash -c 'tmp=$(mktemp --suffix=.png); wayfreeze & pid=$!; sleep 0.2; grim -g "$(slurp)" "$tmp"; kill $pid; swappy -f "$tmp"; rm "$tmp"'
 
 # Move your focus around
 bindsym $mod+$left focus left

@@ -151,6 +151,7 @@ install_essential_packages() {
         virt-manager \
         visual-studio-code-bin \
         waybar \
+        wayfreeze-git \
         wofi \
         xdg-desktop-portal \
         xdg-desktop-portal-wlr \
