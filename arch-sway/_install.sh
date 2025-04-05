@@ -77,6 +77,7 @@ install_essential_packages() {
     yay -S --noconfirm --needed \
         alacritty \
         aspnet-runtime \
+        audacity \
         axel \
         bat \
         blender \
@@ -90,6 +91,7 @@ install_essential_packages() {
         docker \
         docker-compose \
         dotnet-sdk \
+        dotnet-sdk-8.0 \
         easyeffects \
         fastfetch \
         ffmpeg \
@@ -101,7 +103,9 @@ install_essential_packages() {
         grim \
         hugo \
         imv \
+        inkscape \
         iwd \
+        libreoffice-still \
         light \
         man \
         mpv \
@@ -120,8 +124,10 @@ install_essential_packages() {
         polkit-gnome \
         qemu-full \
         qt6-wayland \
+        reaper \
         samba \
         slurp \
+        spotify-player-full \
         sqlitebrowser \
         swappy \
         sway \
@@ -132,6 +138,7 @@ install_essential_packages() {
         ttf-roboto \
         ttf-roboto-serif \
         unzip \
+        upscayl-bin \
         vim \
         virt-manager \
         visual-studio-code-bin \
