@@ -5,6 +5,7 @@ sudo rm -f /usr/share/applications/avahi-discover.desktop
 sudo rm -f /usr/share/applications/bssh.desktop
 sudo rm -f /usr/share/applications/btop.desktop
 sudo rm -f /usr/share/applications/bvnc.desktop
+sudo rm -f /usr/share/applications/electron27.desktop
 sudo rm -f /usr/share/applications/htop.desktop
 sudo rm -f /usr/share/applications/imv.desktop
 sudo rm -f /usr/share/applications/imv-dir.desktop
