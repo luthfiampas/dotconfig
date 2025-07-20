@@ -114,7 +114,6 @@ install_essential_packages() {
         imv \
         inkscape \
         iwd \
-        libreoffice-still \
         light \
         man \
         mpv \
@@ -166,14 +165,15 @@ install_essential_packages() {
 make_essential_directories() {
     echo "Creating essential directories..."
 
-    sudo mkdir -p /data/pictures/wallpapers
-    sudo mkdir -p /data/repos/personal
-    sudo mkdir -p /data/repos/client
+    sudo mkdir -p /cloud
+    sudo mkdir -p /local/repos/personal
+    sudo mkdir -p /local/repos/client
     sudo mkdir -p /mnt/1
     sudo mkdir -p /mnt/2
     sudo mkdir -p /mnt/3
 
-    sudo chmod 777 -R /data
+    sudo chmod 777 -R /cloud
+    sudo chmod 777 -R /local
     sudo chmod 777 -R /mnt/1
     sudo chmod 777 -R /mnt/2
     sudo chmod 777 -R /mnt/3
