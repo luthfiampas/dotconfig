@@ -17,3 +17,5 @@ sudo rm -f /usr/share/applications/mpv.desktop
 sudo rm -f /usr/share/applications/qv4l2.desktop
 sudo rm -f /usr/share/applications/qvidcap.desktop
 sudo rm -f /usr/share/applications/vim.desktop
+sudo rm -f /usr/share/applications/xgps.desktop
+sudo rm -f /usr/share/applications/xgpsspeed.desktop
