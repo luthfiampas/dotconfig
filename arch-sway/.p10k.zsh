@@ -1718,3 +1718,7 @@ typeset -g POWERLEVEL9K_CONFIG_FILE=${${(%):-%x}:a}
 
 (( ${#p10k_config_opts} )) && setopt ${p10k_config_opts[@]}
 'builtin' 'unset' 'p10k_config_opts'
+
+# Fixes layouts after resizing the terminal.
+function p10k-on-pre-prompt() {}
+function p10k-on-post-prompt() {}
