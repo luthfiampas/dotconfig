@@ -133,6 +133,7 @@ install_essential_packages() {
         qemu-full \
         qt6-wayland \
         reaper \
+        reflector \
         samba \
         slurp \
         spotify-player-full \
