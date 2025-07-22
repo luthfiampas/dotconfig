@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=imv Image Viewer (Hidden)
+Exec=imv %U
+Type=Application
+MimeType=image/png;image/jpeg;image/jpg;image/gif;image/webp;image/bmp;image/tiff;image/x-xbitmap;image/svg+xml;
+NoDisplay=true
+

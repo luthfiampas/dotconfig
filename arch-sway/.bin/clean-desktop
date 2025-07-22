@@ -1,10 +1,13 @@
 #!/bin/bash
 
 sudo rm -f /usr/share/applications/Alacritty.desktop
+sudo rm -f /usr/share/applications/assistant.desktop
 sudo rm -f /usr/share/applications/avahi-discover.desktop
 sudo rm -f /usr/share/applications/bssh.desktop
 sudo rm -f /usr/share/applications/btop.desktop
 sudo rm -f /usr/share/applications/bvnc.desktop
+sudo rm -f /usr/share/applications/cmake-gui.desktop
+sudo rm -f /usr/share/applications/designer.desktop
 sudo rm -f /usr/share/applications/electron27.desktop
 sudo rm -f /usr/share/applications/htop.desktop
 sudo rm -f /usr/share/applications/imv.desktop
@@ -12,10 +15,15 @@ sudo rm -f /usr/share/applications/imv-dir.desktop
 sudo rm -f /usr/share/applications/java-java-openjdk.desktop
 sudo rm -f /usr/share/applications/jconsole-java-openjdk.desktop
 sudo rm -f /usr/share/applications/jshell-java-openjdk.desktop
+sudo rm -f /usr/share/applications/linguist.desktop
 sudo rm -f /usr/share/applications/lstopo.desktop
 sudo rm -f /usr/share/applications/mpv.desktop
+sudo rm -f /usr/share/applications/qdbusviewer.desktop
 sudo rm -f /usr/share/applications/qv4l2.desktop
 sudo rm -f /usr/share/applications/qvidcap.desktop
 sudo rm -f /usr/share/applications/vim.desktop
 sudo rm -f /usr/share/applications/xgps.desktop
 sudo rm -f /usr/share/applications/xgpsspeed.desktop
+
+# Use pyenv in virt-manager
+sudo sed -i 's|^Exec=virt-manager$|Exec=env PYENV_VERSION=system virt-manager|' /usr/share/applications/virt-manager.desktop

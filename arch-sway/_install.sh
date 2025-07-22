@@ -106,6 +106,7 @@ install_essential_packages() {
         ffmpeg \
         firefox \
         fzf \
+        gtk3 \
         git \
         glow \
         go \
@@ -130,13 +131,15 @@ install_essential_packages() {
         pipewire-jack \
         pipewire-pulse \
         polkit-gnome \
+        python-gobject \
         qemu-full \
         qt6-wayland \
         reaper \
         reflector \
         samba \
+        seafile-client \
         slurp \
-        spotify-player-full \
+        spotify-player \
         sqlitebrowser \
         swappy \
         sway \
@@ -166,9 +169,10 @@ install_essential_packages() {
 make_essential_directories() {
     echo "Creating essential directories..."
 
-    sudo mkdir -p /cloud
-    sudo mkdir -p /local/repos/personal
-    sudo mkdir -p /local/repos/client
+    sudo mkdir -p /cloud/me
+    sudo mkdir -p /local/me/assets/wallpapers
+    sudo mkdir -p /local/me/repos/personal
+    sudo mkdir -p /local/me/repos/client
     sudo mkdir -p /mnt/1
     sudo mkdir -p /mnt/2
     sudo mkdir -p /mnt/3

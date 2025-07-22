@@ -1,0 +1,55 @@
+[Default Applications]
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/chrome=firefox.desktop
+text/html=firefox.desktop
+application/x-extension-htm=firefox.desktop
+application/x-extension-html=firefox.desktop
+application/x-extension-shtml=firefox.desktop
+application/xhtml+xml=firefox.desktop
+application/x-extension-xhtml=firefox.desktop
+application/x-extension-xht=firefox.desktop
+
+# Video files
+video/mp4=mpv-hidden.desktop
+video/x-matroska=mpv-hidden.desktop
+video/webm=mpv-hidden.desktop
+video/quicktime=mpv-hidden.desktop
+video/x-msvideo=mpv-hidden.desktop
+video/x-flv=mpv-hidden.desktop
+video/ogg=mpv-hidden.desktop
+
+# Audio files
+audio/mpeg=mpv-hidden.desktop
+audio/x-wav=mpv-hidden.desktop
+audio/ogg=mpv-hidden.desktop
+audio/x-flac=mpv-hidden.desktop
+audio/mp4=mpv-hidden.desktop
+audio/aac=mpv-hidden.desktop
+audio/x-ms-wma=mpv-hidden.desktop
+
+# Image files
+image/png=imv-hidden.desktop
+image/jpeg=imv-hidden.desktop
+image/jpg=imv-hidden.desktop
+image/gif=imv-hidden.desktop
+image/webp=imv-hidden.desktop
+image/bmp=imv-hidden.desktop
+image/tiff=imv-hidden.desktop
+image/x-xbitmap=imv-hidden.desktop
+image/svg+xml=imv-hidden.desktop
+
+# PDF files
+application/pdf=firefox.desktop
+
+[Added Associations]
+x-scheme-handler/http=firefox-private.desktop;
+x-scheme-handler/https=firefox-private.desktop;
+x-scheme-handler/chrome=firefox-private.desktop;
+text/html=firefox-private.desktop;
+application/x-extension-htm=firefox-private.desktop;
+application/x-extension-html=firefox-private.desktop;
+application/x-extension-shtml=firefox-private.desktop;
+application/xhtml+xml=firefox-private.desktop;
+application/x-extension-xhtml=firefox-private.desktop;
+application/x-extension-xht=firefox-private.desktop;

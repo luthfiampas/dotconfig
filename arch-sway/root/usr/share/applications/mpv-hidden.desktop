@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=MPV Media Player (Hidden)
+Exec=mpv --player-operation-mode=pseudo-gui %U
+Type=Application
+MimeType=video/mp4;video/x-matroska;video/webm;video/quicktime;video/x-msvideo;video/x-flv;video/ogg;audio/mpeg;audio/x-wav;audio/ogg;audio/x-flac;audio/mp4;audio/aac;audio/x-ms-wma;
+NoDisplay=true
