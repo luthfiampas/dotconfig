@@ -380,13 +380,6 @@ configure_node_js() {
 }
 
 configure_services() {
-    echo "Setting up dnscrypt-proxy service..."
-    if sudo systemctl enable --now dnscrypt-proxy; then
-        echo "dnscrypt-proxy service started successfully."
-    else
-        echo "Failed to start dnscrypt-proxy service, but continuing..."
-    fi
-
     echo "Setting up ssh-agent service..."
     if systemctl --user enable --now ssh-agent; then
         echo "ssh-agent service started successfully."
