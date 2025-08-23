@@ -346,7 +346,7 @@ configure_vs_code() {
     retry_command "code --install-extension fcrespo82.markdown-table-formatter"
     retry_command "code --install-extension formulahendry.auto-close-tag"
     retry_command "code --install-extension formulahendry.auto-rename-tag"
-    retry_command "code --install-extension foxundermoon.shell-format"
+    retry_command "code --install-extension foxundermoon.shell-format@7.2.5"
     retry_command "code --install-extension golang.go"
     retry_command "code --install-extension gruntfuggly.todo-tree"
     retry_command "code --install-extension hediet.vscode-drawio"
