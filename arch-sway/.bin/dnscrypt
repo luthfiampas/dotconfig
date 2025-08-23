@@ -1,0 +1,20 @@
+#!/bin/bash
+
+RESOLVED_CONF="/etc/systemd/resolved.conf"
+RESOLV_CONF="/etc/resolv.conf"
+
+if [ "$1" = "enable" ]; then
+    sudo bash -c "echo -e '[Resolve]\nDNS=127.0.0.1\nDomains~=.' > $RESOLVED_CONF"
+    sudo bash -c "echo -e 'nameserver ::1\nnameserver 127.0.0.1\noptions edns0' > $RESOLV_CONF"
+    sudo systemctl restart dnscrypt-proxy
+elif [ "$1" = "disable" ]; then
+    sudo bash -c "echo > $RESOLVED_CONF"
+    sudo bash -c "echo 'options edns0' > $RESOLV_CONF"
+    sudo systemctl stop dnscrypt-proxy
+else
+    echo "Usage: $0 enable|disable"
+    exit 1
+fi
+
+sudo systemctl restart systemd-resolved
+sudo systemctl restart iwd

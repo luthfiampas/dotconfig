@@ -217,6 +217,7 @@ copy_bin_files() {
     mkdir -p ~/.bin
     cp -r .bin/. ~/.bin/
     chmod +x ~/.bin/clean-desktop
+    chmod +x ~/.bin/dnscrypt
     echo "Bin files copied!"
 }
 
