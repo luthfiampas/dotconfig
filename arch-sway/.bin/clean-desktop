@@ -8,7 +8,7 @@ sudo rm -f /usr/share/applications/btop.desktop
 sudo rm -f /usr/share/applications/bvnc.desktop
 sudo rm -f /usr/share/applications/cmake-gui.desktop
 sudo rm -f /usr/share/applications/designer.desktop
-sudo rm -f /usr/share/applications/electron27.desktop
+sudo rm -f /usr/share/applications/electron*.desktop
 sudo rm -f /usr/share/applications/htop.desktop
 sudo rm -f /usr/share/applications/imv.desktop
 sudo rm -f /usr/share/applications/imv-dir.desktop

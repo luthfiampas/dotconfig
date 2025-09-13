@@ -83,11 +83,14 @@ install_essential_packages() {
     echo "Installing essential packages..."
 
     yay -S --noconfirm --needed \
+        adb \
+        age \
         alacritty \
         aspnet-runtime \
         audacity \
         axel \
         bat \
+        bitwarden \
         blender \
         btop \
         calc \
@@ -96,12 +99,13 @@ install_essential_packages() {
         dbeaver \
         ddcutil \
         dnscrypt-proxy \
-        dnsmasq \
         docker \
+        docker-buildx \
         docker-compose \
         dotnet-sdk \
         dotnet-sdk-8.0 \
         easyeffects \
+        ente-auth-bin \
         fastfetch \
         ffmpeg \
         firefox \
@@ -139,11 +143,11 @@ install_essential_packages() {
         samba \
         seafile-client \
         slurp \
-        spotify-player \
         sqlitebrowser \
         swappy \
         sway \
         swaybg \
+        tree \
         ttf-font-awesome \
         ttf-jetbrains-mono \
         ttf-jetbrains-mono-nerd \
@@ -156,6 +160,7 @@ install_essential_packages() {
         visual-studio-code-bin \
         waybar \
         wayfreeze-git \
+        wget \
         wofi \
         xdg-desktop-portal \
         xdg-desktop-portal-wlr \
@@ -169,16 +174,15 @@ install_essential_packages() {
 make_essential_directories() {
     echo "Creating essential directories..."
 
-    sudo mkdir -p /cloud/me
-    sudo mkdir -p /local/me/assets/wallpapers
-    sudo mkdir -p /local/me/repos/personal
-    sudo mkdir -p /local/me/repos/client
+    sudo mkdir -p /data/$USER/assets/wallpapers
+    sudo mkdir -p /data/$USER/repos/client
+    sudo mkdir -p /data/$USER/repos/personal
+    sudo mkdir -p /data/$USER/sync
     sudo mkdir -p /mnt/1
     sudo mkdir -p /mnt/2
     sudo mkdir -p /mnt/3
 
-    sudo chmod 777 -R /cloud
-    sudo chmod 777 -R /local
+    sudo chmod 777 -R /data/$USER
     sudo chmod 777 -R /mnt/1
     sudo chmod 777 -R /mnt/2
     sudo chmod 777 -R /mnt/3
@@ -351,6 +355,7 @@ configure_vs_code() {
     retry_command "code --install-extension gruntfuggly.todo-tree"
     retry_command "code --install-extension hediet.vscode-drawio"
     retry_command "code --install-extension irongeek.vscode-env"
+    retry_command "code --install-extension matthewpi.caddyfile-support"
     retry_command "code --install-extension miguelsolorio.symbols"
     retry_command "code --install-extension ms-dotnettools.csharp@2.45.25"
     retry_command "code --install-extension perkovec.emoji"

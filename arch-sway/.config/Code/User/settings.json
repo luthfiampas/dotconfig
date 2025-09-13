@@ -21,7 +21,7 @@
         "editor.defaultFormatter": "sissel.shopify-liquid"
     },
     "[markdown]": {
-        "editor.defaultFormatter": "fcrespo82.markdown-table-formatter"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[properties]": {
         "editor.wordWrap": "off"
@@ -38,14 +38,15 @@
     "codeium.enableConfig": {
         "*": true,
         "aspnetcorerazor": true,
+        "caddyfile": true,
         "editorconfig": true,
         "http": true,
         "markdown": true,
-        "xml": true,
-        "env": true
+        "xml": true
     },
     "csharp.semanticHighlighting.enabled": true,
     "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.renderSideBySide": true,
     "dotnet.typeMembers.memberInsertionLocation": "atTheEnd",
     "dotnet.typeMembers.propertyGenerationBehavior": "preferAutoProperties",
     "editor.fontFamily": "'JetBrains Mono', 'Noto Color Emoji', 'Font Awesome 6 Brands', 'Font Awesome 6 Free', 'Font Awesome 6 Free Solid'",
@@ -62,12 +63,28 @@
     },
     "explorer.autoReveal": false,
     "explorer.compactFolders": false,
+    "explorer.fileNesting.patterns": {
+        "*.db": "${capture}.${extname}-*",
+        "*.db3": "${capture}.${extname}-*",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.s3db": "${capture}.${extname}-*",
+        "*.sdb": "${capture}.${extname}-*",
+        "*.sqlite": "${capture}.${extname}-*",
+        "*.sqlite3": "${capture}.${extname}-*",
+        "*.ts": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+        "tsconfig.json": "tsconfig.*.json"
+    },
     "extensions.autoUpdate": false,
     "extensions.ignoreRecommendations": true,
     "files.associations": {
-        "*.xaml": "xml",
         ".env": "env",
-        ".env.*": "env"
+        ".env.*": "env",
+        "*.caddy": "caddyfile",
+        "*.sh": "shellscript",
+        "*.xaml": "xml"
     },
     "files.enableTrash": false,
     "git.openRepositoryInParentFolders": "never",
@@ -84,6 +101,19 @@
     "php.inlayHints.types.suppressVariableFromLiteral": false,
     "remote.autoForwardPortsSource": "hybrid",
     "security.workspace.trust.untrustedFiles": "open",
+    "shellformat.effectLanguages": [
+        "shellscript",
+        "dockerfile",
+        "dotenv",
+        "hosts",
+        "jvmoptions",
+        "ignore",
+        "gitignore",
+        "properties",
+        "spring-boot-properties",
+        "azcli",
+        "bats"
+    ],
     "symbols.hidesExplorerArrows": false,
     "telemetry.telemetryLevel": "off",
     "terminal.external.linuxExec": "alacritty",
@@ -133,20 +163,5 @@
             "xmlns": "http://schemas.microsoft.com/developer/msbuild/2003",
             "xsdUri": "https://raw.githubusercontent.com/Microsoft/msbuild/master/src/MSBuild/MSBuild/Microsoft.Build.CommonTypes.xsd https://raw.githubusercontent.com/Microsoft/msbuild/master/src/MSBuild/MSBuild/Microsoft.Build.Core.xsd"
         }
-    ],
-    "explorer.fileNesting.patterns": {
-        "*.ts": "${capture}.js",
-        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
-        "*.jsx": "${capture}.js",
-        "*.tsx": "${capture}.ts",
-        "tsconfig.json": "tsconfig.*.json",
-        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
-        "*.sqlite": "${capture}.${extname}-*",
-        "*.db": "${capture}.${extname}-*",
-        "*.sqlite3": "${capture}.${extname}-*",
-        "*.db3": "${capture}.${extname}-*",
-        "*.sdb": "${capture}.${extname}-*",
-        "*.s3db": "${capture}.${extname}-*"
-    },
-    "diffEditor.renderSideBySide": true
+    ]
 }

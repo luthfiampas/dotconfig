@@ -27,16 +27,11 @@ setopt HIST_BEEP
 export ZSH="$HOME/.oh-my-zsh"
 
 # Configure aliases
-alias spotify="spotify_player"
 alias virt-manager="env PYENV_VERSION=system virt-manager"
 
 # Configure functions
-cd_cloud() {
-  builtin cd "/cloud/me/$1"
-}
-
-cd_local() {
-  builtin cd "/local/me/$1"
+cd_luthfi() {
+   builtin cd "/data/luthfi/$1"
 }
 
 # Configure pyenv
