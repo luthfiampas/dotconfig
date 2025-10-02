@@ -128,6 +128,7 @@ install_essential_packages() {
         ntfs-3g \
         obs-studio \
         openssh \
+        otf-font-awesome \
         pavucontrol \
         pipewire \
         pipewire-alsa \
