@@ -1,6 +1,9 @@
 root = true
 
-# Global files
 [*]
 indent_style = space
+insert_final_newline = true
+
+[*.sh]
+indent_size = 2
 insert_final_newline = true

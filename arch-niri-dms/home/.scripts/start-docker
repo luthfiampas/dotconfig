@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo systemctl start docker
+sudo iptables -A DOCKER-USER -i virbr0 -j ACCEPT
+sudo iptables -A DOCKER-USER -o virbr0 -j ACCEPT

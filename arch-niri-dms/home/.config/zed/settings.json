@@ -1,0 +1,115 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "base_keymap": "VSCode",
+  "buffer_font_fallbacks": [
+    "Noto Color Emoji",
+    "Font Awesome 6 Brands",
+    "Font Awesome 6 Free",
+    "Font Awesome 6 Free Solid"
+  ],
+  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_size": 13.0,
+  "buffer_font_weight": 400.0,
+  "code_lens": "on",
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "dap": {
+    "netcoredbg": {
+      "args": [],
+      "binary": "/usr/local/netcoredbg"
+    }
+  },
+  "disable_ai": true,
+  "file_types": {
+    "caddyfile": [
+      "*.caddy"
+    ],
+    "env": [
+      ".env",
+      ".env.*"
+    ],
+    "shellscript": [
+      "*.sh"
+    ],
+    "xml": [
+      "*.xaml"
+    ]
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "gutter": {
+    "line_numbers": true,
+    "runnables": true
+  },
+  "icon_theme": {
+    "dark": "VSCode Icons for Zed (Dark)",
+    "light": "Catppuccin Mocha",
+    "mode": "light"
+  },
+  "minimap": {
+    "show": "never"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "project_panel": {
+    "auto_fold_dirs": false,
+    "auto_reveal_entries": false,
+    "button": true,
+    "default_width": 230.0,
+    "dock": "right",
+    "hide_root": true
+  },
+  "relative_line_numbers": "disabled",
+  "status_bar": {
+    "active_language_button": true
+  },
+  "tab_bar": {
+    "show": true
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "terminal": {
+    "font_family": "JetBrainsMono Nerd Font",
+    "font_size": 13.0,
+    "line_height": {
+      "custom": 1.2000000476837158
+    }
+  },
+  "theme": {
+    "dark": "Catppuccin Mocha",
+    "light": "Catppuccin Mocha",
+    "mode": "dark"
+  },
+  "title_bar": {
+    "show_branch_name": false,
+    "show_branch_status_icon": false,
+    "show_menus": false,
+    "show_onboarding_banner": false,
+    "show_project_items": true,
+    "show_sign_in": false,
+    "show_user_menu": false,
+    "show_user_picture": false
+  },
+  "ui_font_family": "JetBrains Mono",
+  "ui_font_size": 15.0,
+  "use_system_window_tabs": true,
+  "window_decorations": "server",
+  "zoomed_padding": true
+}
